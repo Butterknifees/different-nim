@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Different Nim</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="welcome-screen" class="welcome-screen">
+        <h1 class="game-title">A Different Nim</h1>
+        <div class="game-version">
+            <h2>Select Game Version</h2>
+            <select id="game-version-select">
+                <option value="all-small">All Small Variation</option>
+                <option value="non-all-small">Non-All Small Variation</option>
+            </select>
+        </div>
+        <div class="game-rules">
+            <h2>Game Rules</h2>
+            <div id="all-small-rules" class="rules-content">
+                <ul>
+                    <li>The game is played on an n×n grid with dots</li>
+                    <li>Two players alternate turns: Left and Right</li>
+                    <li>Left can remove any number of dots from any column</li>
+                    <li>Right can remove any number of dots from any row</li>
+                    <li>Players must remove at least one dot to make a move</li>
+                    <li>The last player who makes a legal move wins</li>
+                </ul>
+            </div>
+            <div id="non-all-small-rules" class="rules-content hidden">
+                <ul>
+                    <li>The game is played on an n×n grid with dots</li>
+                    <li>Two players alternate turns: Left and Right</li>
+                    <li>Left can remove any number of dots from any column, but cannot completely remove a column</li>
+                    <li>Right can remove any number of dots from any row, but cannot completely remove a row</li>
+                    <li>Players must remove at least one dot to make a move</li>
+                    <li>The last player who makes a legal move wins</li>
+                </ul>
+            </div>
+        </div>
+        <div class="board-size-selection">
+            <h2>Select Board Size</h2>
+            <div class="size-input">
+                <label for="board-size">Board Size (n×n):</label>
+                <input type="number" id="board-size" min="2" max="10" value="3">
+            </div>
+            <button id="start-game">Start Game</button>
+        </div>
+    </div>
+
+    <div id="game-screen" class="game-screen hidden">
+        <div class="game-container">
+            <h1 class="game-title">A Different Nim</h1>
+            <div class="game-info">
+                <div id="current-player">Current Player: Left</div>
+                <div id="game-status">Game in progress</div>
+                <div id="game-version-display">Version: All Small</div>
+            </div>
+            <div class="board-container">
+                <div id="game-board"></div>
+            </div>
+            <div class="move-controls">
+                <button id="confirm-move">Confirm Move</button>
+                <div id="move-message"></div>
+            </div>
+            <div class="controls">
+                <button id="new-game">New Game</button>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html> 
