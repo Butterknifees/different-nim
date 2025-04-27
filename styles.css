@@ -281,4 +281,57 @@ body::before {
     text-shadow: 0 2px 8px #0b0a0a99;
     font-size: 1.1em;
     text-align: center;
+}
+
+@media (max-width: 700px) {
+    .welcome-screen, .game-screen, .game-container {
+        max-width: 98vw;
+        padding: 10vw 2vw 4vw 2vw;
+        border-radius: 12px;
+        box-sizing: border-box;
+    }
+    .game-title {
+        font-size: 2rem;
+        margin-bottom: 24px;
+    }
+    .game-version, .game-rules, .board-size-selection {
+        padding: 16px 4vw 10px 4vw;
+        border-radius: 10px;
+        margin-bottom: 18px;
+    }
+    .board-container {
+        margin: 10px 0;
+    }
+    #game-board {
+        padding: 4px;
+        border-radius: 4px;
+        grid-auto-rows: 32px;
+    }
+    .cell {
+        width: 32px;
+        height: 32px;
+        border-radius: 6px;
+    }
+    .cell.has-dot::after {
+        width: 14px;
+        height: 14px;
+    }
+    #confirm-move, #start-game, #new-game {
+        padding: 8px 12px;
+        font-size: 1em;
+        border-radius: 6px;
+    }
+    .size-input input, .game-version select {
+        width: 60vw;
+        min-width: 80px;
+        max-width: 180px;
+        font-size: 1em;
+        padding: 6px;
+    }
+    .move-controls {
+        margin-bottom: 10px;
+    }
+    #move-message {
+        font-size: 1em;
+    }
 } 
