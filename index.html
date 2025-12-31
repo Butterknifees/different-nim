@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="welcome-screen" class="welcome-screen">
-        <h1 class="game-title">A Different Nim</h1>
+        <h1 class="game-title">Grid Nim</h1>
         <div class="game-version">
             <h2>Select Game Version</h2>
             <select id="game-version-select">
@@ -21,29 +21,29 @@
             <h2>Game Rules</h2>
             <div id="all-small-rules" class="rules-content">
                 <ul>
-                    <li>The game is played on an n×n grid with dots</li>
+                    <b><li>The game is played on an n×n grid with dots</li>
                     <li>Two players alternate turns: Left and Right</li>
                     <li>Left can remove any number of dots from any column</li>
                     <li>Right can remove any number of dots from any row</li>
                     <li>Players must remove at least one dot to make a move</li>
-                    <li>The last player who makes a legal move wins</li>
+                    <li>The last player who makes a legal move wins</li></b>
                 </ul>
             </div>
             <div id="non-all-small-rules" class="rules-content hidden">
                 <ul>
-                    <li>The game is played on an n×n grid with dots</li>
+                    <b><li>The game is played on an n×n grid with dots</li>
                     <li>Two players alternate turns: Left and Right</li>
                     <li>Left can remove any number of dots from any column, but cannot completely remove a column</li>
                     <li>Right can remove any number of dots from any row, but cannot completely remove a row</li>
                     <li>Players must remove at least one dot to make a move</li>
-                    <li>The last player who makes a legal move wins</li>
+                    <li>The last player who makes a legal move wins</li></b>
                 </ul>
             </div>
         </div>
         <div class="board-size-selection">
             <h2>Select Board Size</h2>
             <div class="size-input">
-                <label for="board-size">Board Size (n×n):</label>
+                <b><label for="board-size">Board Size (n×n):</label></b>
                 <input type="number" id="board-size" min="2" max="10" value="3">
             </div>
             <button id="start-game">Start Game</button>
@@ -52,7 +52,7 @@
 
     <div id="game-screen" class="game-screen hidden">
         <div class="game-container">
-            <h1 class="game-title">A Different Nim</h1>
+            <h1 class="game-title">Grid Nim</h1>
             <div class="game-info">
                 <div id="current-player">Current Player: Left</div>
                 <div id="game-status">Game in progress</div>
